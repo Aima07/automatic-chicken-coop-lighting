@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "author": "Ahmad Waliyudin",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -9, "left": 37.8, "attrs": {} },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": -216.6, "left": -220.7, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -268.5, "left": 205.8, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -243.2,
+      "left": 399.2,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 307.4, "left": 105.6, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 92.4,
+      "left": -303.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 138.35,
+      "left": -201.6,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "rtc1:5V", "uno:5V", "orange", [ "h-57.6", "v134", "h240", "v268.8", "h226.6" ] ],
+    [ "rtc1:GND", "uno:GND.1", "cyan", [ "h-57.6", "v-48", "h422.1" ] ],
+    [ "rtc1:SDA", "uno:A4.2", "green", [ "h-48", "v114.9", "h394" ] ],
+    [ "rtc1:SCL", "uno:A5.2", "yellow", [ "h-38.4", "v95.8", "h374.4" ] ],
+    [ "dht1:GND", "uno:GND.1", "magenta", [ "v134.4", "h-96.3" ] ],
+    [ "dht1:VCC", "uno:5V", "white", [ "v124.8", "h115.2", "v268.8", "h-138.2" ] ],
+    [ "dht1:SDA", "uno:7", "green", [ "v0" ] ],
+    [ "lcd1:VCC", "uno:5V", "purple", [ "h-19.2", "v432.1", "h-186.2" ] ],
+    [ "lcd1:GND", "uno:GND.2", "gray", [ "h-28.8", "v432", "h-167.1" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-38.4", "v403.4", "h-81" ] ],
+    [ "lcd1:SCL", "uno:A5", "blue", [ "h-48", "v384.3", "h-61.9" ] ],
+    [ "relay1:IN", "uno:8", "red", [ "h-86.4", "v-393.8", "h191.6" ] ],
+    [ "relay1:GND", "uno:GND.3", "black", [ "h-76.8", "v-38.8", "h188" ] ],
+    [ "relay1:VCC", "uno:5V", "gray", [ "h-67.2", "v-96", "h159.4" ] ],
+    [ "led1:C", "uno:GND.2", "green", [ "v0" ] ],
+    [ "led1:A", "r1:1", "green", [ "v0" ] ],
+    [ "r1:2", "uno:9", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
