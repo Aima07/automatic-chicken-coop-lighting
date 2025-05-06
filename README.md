@@ -17,7 +17,6 @@ Membuat sistem yang dapat mengatur lampu secara otomatis untuk menjaga kenyamana
 | Nama File       | Keterangan |
 |----------------|------------|
 | `sketch.ino`   | Program utama untuk Arduino |
-| `diagram.json` | File diagram rangkaian (misalnya dari Tinkercad) |
 | `libraries.txt`| Daftar library yang digunakan |
 | `README.md`    | Deskripsi proyek |
 | `.gitignore`   | (Opsional) Mengabaikan file yang tidak perlu |
